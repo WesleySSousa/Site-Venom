@@ -1,0 +1,868 @@
+/*Import Site*/
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Antonio:wght@100..700&family=Bebas+Neue&family=Lexend+Deca:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Lugrasimo&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Reem+Kufi+Fun:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan:ital@0;1&family=VT323&display=swap");
+
+/*Fim Import Site*/
+
+/*Padroes Gerais Site*/
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/Image/Backgroundteia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -10;
+  filter: blur(10px);
+}
+
+.ImgHomeOff {
+  display: none;
+}
+
+.imghome {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -10;
+  height: 100vh;
+}
+
+.imghome img {
+  width: 400px;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  transform: rotateY(180deg);
+  filter: drop-shadow(0px 0px 100px rgb(0, 153, 255, 0.6));
+}
+
+/*Fim Padroes Gerais Site*/
+
+/*Header Site*/
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  transition: all 0.7s;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 5px;
+  position: fixed;
+  z-index: 1100;
+}
+
+header.RolagemBackgroundHeader {
+  background: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: 0.7s ease-in-out;
+}
+
+/*Logo Site*/
+.LogoSite {
+  width: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.7s;
+}
+
+.LogoSite img {
+  width: 200px;
+  transition: all 0.7s;
+}
+/*End Logo Site*/
+
+/*Menu Site*/
+.MenuNav {
+  width: 800px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.7s;
+}
+
+.MenuNav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30%;
+  box-sizing: border-box;
+}
+
+.MenuNav a {
+  color: white;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.MenuNav a:hover {
+  color: #00aeff;
+  transition: 0.5s ease-in-out;
+  border-bottom: 1px solid #00aeff;
+}
+
+.MenuNav a:not(:hover) {
+  transition: 0.5s ease-in-out;
+}
+
+/*End Menu Site*/
+
+/*Button Discord*/
+.Discord {
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.7s;
+}
+.Discord img {
+  width: 40px;
+  filter: drop-shadow(0px 0px 3px rgb(0, 238, 255));
+}
+.Discord img:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+.Discord img:not(:hover) {
+  transition: 0.5s ease-in-out;
+}
+/*End Button Discord*/
+
+/*End Header Site*/
+
+/* Caixa Inicio Site*/
+
+.CaixaHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  height: 95vh;
+}
+
+.TextoHome {
+  position: fixed;
+  left: 200px;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 600px;
+  height: 250px;
+  z-index: -10;
+}
+
+.TextoHome h1 {
+  letter-spacing: 10px;
+  font-size: 45px;
+  margin: 15px 0px;
+  color: #00aeff9f;
+  text-shadow: 0px 0px 5px black;
+}
+
+.TextoHome p {
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin: 15px 0px;
+  color: #adadad;
+  text-shadow: 0px 0px 5px black;
+}
+.TextoHome span {
+  color: #00aeff;
+}
+/*Fim Home*/
+
+/* Ondas Inicio*/
+
+.Onda {
+  width: 100%;
+  height: 100px;
+  background-image: url(/Image/onda.png);
+  filter: brightness(0);
+  background-size: 1000px 100px;
+  position: absolute;
+  bottom: 0px;
+  animation: WaveAnimation 2s ease-in-out infinite alternate;
+}
+
+#Onda1 {
+  z-index: 1000;
+  opacity: 1;
+  background-position-x: 400px;
+}
+#Onda2 {
+  z-index: 999;
+  opacity: 0.5;
+  background-position-x: 300px;
+}
+#Onda3 {
+  z-index: 998;
+  opacity: 0.2;
+  background-position-x: 200px;
+}
+#Onda4 {
+  z-index: 997;
+  opacity: 0.8;
+  background-position-x: 100px;
+}
+
+@keyframes WaveAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*Fim Ondas*/
+/* Fim Caixa Inicio Site*/
+
+main {
+  background: black;
+  color: white;
+  padding: 150px 0px;
+  transition: 0.2s ease-in-out;
+}
+.MainBackground {
+  background: rgba(0, 0, 0, 0.5);
+  transition: 1.5s ease-in-out;
+}
+
+/**/
+/* Caixa Sobre */
+.CaixaSobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 100px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(9, 70, 88, 0.3) 34%,
+    rgba(0, 66, 87, 0.3) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  text-shadow: 2px 2px 2px black;
+  z-index: 10;
+}
+
+/*Textos Sobre Princ*/
+.TextoPrincipalSobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.TextoPrincipalSobre h1 {
+  color: #00aeff;
+  letter-spacing: 7px;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.TextoPrincipalSobre p {
+  color: #adadad;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+/*Fim Textos Sobre Princ*/
+
+.MotivoEscolher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  text-shadow: 2px 2px 2px black;
+}
+
+.MotivoEscolher h1 {
+  color: #00aeff;
+  letter-spacing: 7px;
+  margin-bottom: 100px;
+  font-size: 40px;
+}
+
+.Motivo {
+  margin: 10px 0px;
+  max-width: 500px;
+  min-height: 100px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  margin: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.Motivo:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.03);
+}
+
+.Motivo span {
+  color: #00aeff;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.Motivo p {
+  margin-top: 20px;
+  color: #adadad;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.CaixaMotivos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(/Image/ImgAimColor-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: center;
+}
+/*Fim Motivos*/
+
+.TextoFinalSobre {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.TextoFinalSobre span {
+  color: #00aeff;
+  letter-spacing: 5px;
+  font-size: 40px;
+}
+
+.TextoFinalSobre p {
+  margin-top: 20px;
+  color: #adadad;
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-align: center;
+}
+/* Caixa Sobre */
+
+/**/
+
+/* Ajustes para .ProdutosCaixaMain */
+.ProtudosCaixaMain {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(9, 70, 88, 0.3) 34%,
+    rgba(0, 66, 87, 0.3) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.TextoProdutos h1 {
+  color: #00aeff;
+  letter-spacing: 7px;
+  font-size: 40px;
+}
+
+.TextoProdutos span {
+  color: rgba(0, 174, 255, 0.8);
+  letter-spacing: 5px;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+}
+
+.TextoProdutos p {
+  margin-top: 50px;
+  color: #adadad;
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/**/
+.CaixaProdutosAA {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  flex-wrap: wrap;
+}
+
+.CaixaProdutosAA .Produto {
+  width: 200px;
+  height: 350px;
+  padding: 20px;
+  margin: 50px;
+  background-image: url(/Image/BackgroundTeia2.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.CaixaProdutosAA .Produto h1 {
+  background: #00aeff;
+  box-shadow: 0px 0px 10px black;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAA .Produto button {
+  background: #00aeff;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.CaixaProdutosAA .Produto img {
+  width: 150px;
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAA .Produto a {
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+.CaixaProdutosAA .Produto p {
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAA .Produto:hover img {
+  transform: translate3d(0, 0, 100px);
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAA .Produto:hover a {
+  transform: translate3d(0, 0, 100px);
+  transition: 0.5s ease-in-out;
+}
+
+/**/
+
+.CaixaProdutosAimColor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  flex-wrap: wrap;
+}
+
+.CaixaProdutosAimColor .Produto {
+  width: 200px;
+  height: 350px;
+  padding: 20px;
+  margin: 50px;
+  background-image: url(/Image/BackgroundTeia2.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.CaixaProdutosAimColor .Produto h1 {
+  background: #00aeff;
+  box-shadow: 0px 0px 10px black;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAimColor .Produto button {
+  background: #00aeff;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.CaixaProdutosAimColor .Produto img {
+  width: 150px;
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAimColor .Produto a {
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+.CaixaProdutosAimColor .Produto p {
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAimColor .Produto:hover img {
+  transform: translate3d(0, 0, 100px);
+  transition: 0.5s ease-in-out;
+}
+
+.CaixaProdutosAimColor .Produto:hover a {
+  transform: translate3d(0, 0, 100px);
+  transition: 0.5s ease-in-out;
+}
+
+.TextoAimColor h1 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: #00aeff;
+  letter-spacing: 7px;
+  font-size: 40px;
+}
+
+.TextoAimColor span {
+  color: #adadad;
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.TextoAvaliacoes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  margin-top: 50px;
+}
+
+.TextoAvaliacoes h2 {
+  color: #00aeff;
+  font-size: 45px;
+  text-shadow: 4px 3px 1px rgb(0, 0, 0);
+  margin: 0px;
+}
+
+.TextoAvaliacoes p {
+  color: #adadad;
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/**/
+
+.CaixaAvaliacoesMain {
+  margin-top: 100px;
+}
+
+.CaixaAvaliacoes {
+  filter: drop-shadow(0px 0px 5px rgb(0, 195, 255));
+  max-width: 650px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Avaliacao img {
+  border-radius: 30px !important;
+}
+
+.Avaliacao {
+  display: flex;
+  transition: 0.7s ease-in-out;
+  transform: translateX(0);
+  cursor: grab;
+}
+
+.Avaliacao:active {
+  cursor: grabbing;
+}
+
+/**/
+
+.CaixaAvaliacoesMain {
+  background: rgb(0, 0, 0);
+}
+
+/**/
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    black,
+    black,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.FooterCaixa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.FooterCima img {
+  width: 300px;
+  filter: saturate(0);
+  transition: 0.5s ease-in-out;
+}
+
+.FooterCima img:hover {
+  filter: saturate(1);
+  transition: 0.3s ease-in-out;
+}
+
+.FooterMeio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.FooterMeio ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.FooterMeio ul a {
+  color: #7a7a7a;
+  text-shadow: 0px 0px 2px black;
+  transition: 0.3s ease-in-out;
+}
+.FooterMeio ul a:hover {
+  color: #00aeff;
+  transition: 0.5s ease-in-out;
+}
+
+.FooterBaixo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #7a7a7a;
+  text-shadow: 0px 0px 2px black;
+  transition: 0.3s ease-in-out;
+  margin-top: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+}
+
+.BtnTopOff {
+  opacity: 0 !important;
+  transition: 0.2s ease-in-out !important ;
+}
+
+.BotaoTop {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+  background-image: url(/Image/seta-para-cima.png);
+  background-position: center;
+  background-size: cover;
+  transform: rotate(-30deg);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out !important;
+}
+
+/**/
+@media (max-width: 450px) {
+  .MenuNav {
+    display: none !important;
+  }
+
+  .Discord {
+    display: none !important;
+  }
+
+  .LogoSite {
+    width: 100%;
+    height: 150px;
+  }
+  .LogoSite img {
+    width: 300px;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  /*Fim Header*/
+  .CaixaHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  .TextoHome {
+    top: 300px;
+    left: 40px;
+    width: 80%;
+    border-radius: 10px !important;
+  }
+
+  .TextoHome h1 {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+
+  .TextoHome p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+  }
+
+  .imghome img {
+    width: 400px;
+    top: 50px;
+  }
+
+  .background {
+    width: 100%;
+    height: 100%;
+    background-image: url(/Image/BackgroundTeia2.jpg);
+  }
+
+  .CaixaMotivos {
+    background-image: url(/Image/ImgAimColor-removebg-preview.png);
+    background-size: cover;
+    width: 400px;
+    background-position: center;
+  }
+
+  .CaixaAvaliacoesMain {
+    width: 100%;
+  }
+
+  .TextoAvaliacoes {
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .CaixaAvaliacoes {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .Avaliacao img {
+    padding: 0px 20px !important;
+    box-sizing: border-box;
+  }
+  /**/
+
+  .Onda {
+    width: 450px;
+    top: 650px;
+  }
+
+  @media (min-width: 300px) and (max-width: 360px) {
+    .Onda {
+      width: 450px;
+      bottom: -100px;
+    }
+
+    main {
+      width: 450px;
+      text-align: center;
+    }
+
+    Footer {
+      width: 450px;
+    }
+
+    .Avaliacao img {
+      padding: 0px 20px !important;
+      box-sizing: border-box;
+    }
+  }
+}
