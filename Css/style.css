@@ -736,20 +736,20 @@ footer {
 
 .BotaoTop {
   display: flex;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 10px;
+  right: 10px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  z-index: 1500;
-  background-image: url(/Image/seta-para-cima.png);
+  background-image: url(/Image/SetaVoltarTopSite.png);
   background-position: center;
-  background-size: cover;
-  transform: rotate(-30deg);
-  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  z-index: 1500;
+  opacity: 0.5;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out !important;
 }
 
